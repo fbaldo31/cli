@@ -1,5 +1,6 @@
 import { generate } from "./generate.ts";
 import { newBlank } from "./new.ts";
+import { openapi } from "./openapi.ts";
 
 export async function runCli() {
   const { args } = Deno;
@@ -9,6 +10,7 @@ export async function runCli() {
     ["g", generate],
     ["new", newBlank],
     ["n", newBlank],
+    ["openapi", openapi],
   ]);
 
   const command = args[0];
